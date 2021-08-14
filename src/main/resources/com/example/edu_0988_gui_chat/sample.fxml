@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.edu_0988_gui_chat.Controller">
+    <center>
+        <VBox prefWidth="0.0">
+            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefWidth="0.0" vbarPolicy="ALWAYS">
+                <ListView fx:id="messagesListView" prefHeight="364.0" />
+            </ScrollPane>
+            <HBox minHeight="-Infinity" minWidth="-Infinity">
+                <TextField fx:id="inputTextField" onAction="#send" prefHeight="34.0" prefWidth="225.0" promptText="Введите текст...">
+                    <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="button" onAction="#connect" prefHeight="34.0" prefWidth="100.0" text="Подключиться" textAlignment="CENTER" />
+            </HBox>
+        </VBox>
+    </center>
+    <left>
+        <VBox prefWidth="0.0" BorderPane.alignment="CENTER">
+            <HBox minHeight="-Infinity" minWidth="-Infinity">
+                <Label prefHeight="34.0" prefWidth="125.0" text="Сейчас в сети:" textAlignment="CENTER" textFill="#fc6747">
+                    <font>
+                        <Font name="Arial" size="14.0" />
+                    </font>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                </Label>
+                <Label fx:id="onlineCountLabel" prefHeight="34.0" prefWidth="50.0" text="0" textFill="#fc6747">
+                    <font>
+                        <Font name="Arial" size="14.0" />
+                    </font>
+                </Label>
+            </HBox>
+            <ListView fx:id="usersOnlineListView" prefHeight="366.0" />
+        </VBox>
+    </left>
+</BorderPane>
